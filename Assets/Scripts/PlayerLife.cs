@@ -40,6 +40,7 @@ public class PlayerLife : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         yield return new WaitForSeconds(resetTime);
     }
+
     //Working with Ivoke but not smooth using Coroutine
 /*    void ResetLevel()
     {

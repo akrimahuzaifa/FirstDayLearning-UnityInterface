@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
-{
-    
+{  
     Rigidbody rb;
     [SerializeField] float movementSpeed = 6f;
     [SerializeField] float jumpForce = 5f;
@@ -49,7 +48,6 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
     }
-
     bool IsGround()
     {
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
