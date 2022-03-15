@@ -64,7 +64,7 @@
     <Compile Include="Assets\Scripts\StickyPlatform.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
+     <None Include="Assets\SkyBoxes\Hdri setup.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity2020.3.8\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
