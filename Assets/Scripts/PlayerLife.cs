@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
-    [SerializeField] float resetDelay = 1.3f;
+    [SerializeField] float resetDelay;
     bool dead = false;
+
+    [SerializeField] AudioSource deadthSound;
+
+    public GameObject gamerOverUI;
 
     private void Update()
     {
@@ -27,22 +32,32 @@ public class PlayerLife : MonoBehaviour
             Die();
         }
     }
+
+
     void Die()
     {
+        deadthSound.Play();
         //Invoke(nameof(ResetLevel), resetDelay);
-        StartCoroutine(ResetLevel(resetDelay));
-        dead = true;
+        //StartCoroutine(ResetLevel(resetDelay));
+        if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            dead = true;
+            gamerOverUI.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+
     }
 
-    public IEnumerator ResetLevel(float resetTime)
+/*    public IEnumerator ResetLevel(float resetTime)
     {
-        SceneManager.LoadScene("testin");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         yield return new WaitForSeconds(resetTime);
-    }
+        //SceneManager.LoadScene("Level01");
+    }*/
 
-    //Working with Ivoke but not smooth using Coroutine
-/*    void ResetLevel()
+/*    //Working with Ivoke but not smooth using Coroutine
+    void ResetLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }*/
