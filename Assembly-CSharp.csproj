@@ -56,14 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlayerLife.cs" />
-    <Compile Include="Assets\Scripts\ItemCollector.cs" />
-    <Compile Include="Assets\Scripts\WaypointFollower.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Rotate.cs" />
-    <Compile Include="Assets\Scripts\Finish.cs" />
-    <Compile Include="Assets\Scripts\StickyPlatform.cs" />
-    <Compile Include="Assets\Scripts\ButtonOperation.cs" />
+    <Compile Include="Assets\Tools\GameAssets\Scripts\PlayerLife.cs" />
+    <Compile Include="Assets\Tools\GameAssets\Scripts\ItemCollector.cs" />
+    <Compile Include="Assets\Tools\GameAssets\Scripts\WaypointFollower.cs" />
+    <Compile Include="Assets\Tools\GameAssets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Tools\GameAssets\Scripts\Rotate.cs" />
+    <Compile Include="Assets\Tools\GameAssets\Scripts\ButtonOperation.cs" />
+    <Compile Include="Assets\Tools\GameAssets\Scripts\Finish.cs" />
+    <Compile Include="Assets\Tools\GameAssets\Scripts\StickyPlatform.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
